@@ -39,7 +39,7 @@ helpURL = 'https://www.mathworks.com/help/matlab/';
 
 % 4. What command would you type to see a list of all installed toolboxes?
 
-        %<- command goes here
+  ver;      %<- command goes here
 
 % 5. Write some commands that would return a list of all of the available 
 % functions in the image processing toolbox? 
