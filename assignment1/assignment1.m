@@ -27,7 +27,7 @@ helpURL = 'https://www.mathworks.com/help/matlab/';
 % 2. What does the command 'clear all' do?
 %
 % Answer: The command 'clear all' clears everything and makes more room for
-% function memory.
+% functional memory.
 %
 
 
@@ -53,7 +53,7 @@ x = linspace(-2*pi,2*pi);
 y = sin(x);
 
 figure
-        %<- command goes here
+plot(x,y) %<- command goes here
 
         
 
@@ -69,7 +69,11 @@ figure
 % difference between them?
 
 %
-% Answer: 
+% Answer: The two types of loops are for and while. for is used to repeat a
+% specific block of code a certain amount of time. while is used top repeat
+% a specific block of code an uncertain amount of time until the conditions
+% are met. 
+% 
 % 
 
 
@@ -77,7 +81,7 @@ figure
 % an answer. 
 
 %
-% Answer: 
+% Answer: Not a number. Something divided by 0
 %
 
 
@@ -87,7 +91,7 @@ figure
 % any of the values in A.
 
 A = [1 2 3 2 1 NaN 1 2 3 NaN];
-S = sum(A)
+S = sum('A')
 
 
 % 11. I used to love playing the game minesweeper. Is there a way that I
@@ -102,13 +106,15 @@ S = sum(A)
 % myAge variable. Create a third variable called agePlusOne and add one to 
 % the value of the myAge variable.
 
-
+myAge = 23
+ageLessTwo = myAge - 2 
+agePlusOne = myAge + 1
 
 % 13. Use the built-in function namelengthmax to find out the maximum number of
 % characters that you can have in an identifier name under your version of
 % MATLAB. Assign the value to a variable called maxNameLength.
 
-
+maxNameLength = 63 
 
 
 % 14. You need to convert some weight values from metric to standard units. 
@@ -118,8 +124,13 @@ S = sum(A)
 
 originalWeightkg = 100;
 % Add your code on the next line
-
-
+standarValueoz = originalWeightkg * 35
+standardValuelb = originalWeightkg * 2.2
+who
+whos
+clear standarValueoz
+who
+whos
 
 % 15. Assign a number with a decimal place to an appropriately named variable. Convert the
 % variable to the type int32 and store the result in a new variable (hint: this is known
@@ -131,7 +142,8 @@ originalWeightkg = 100;
 % 16. Create a variable called weightInLBs to store a weight in pounds. Convert this to 
 % kilograms using an appropriate calculation or function and assign the result to a variable weightInKgs.
 
-
+weightInLBs = input ('weight in pounds')
+weightinKGs = weightInLBs / 2.2
 
 
 % 18. Create a variable fTemp to store a temperature in degrees Fahrenheit (F). 
@@ -139,6 +151,8 @@ originalWeightkg = 100;
 % calculation and store the result in a variable cTemp.
 
 
+fTemp = input ('temp in degrees (F)')
+cTemp = (fTemp - 32 ) * 5 / 9 
 
 
 % 19. Using the colon operator, create the following row vectors:
@@ -146,6 +160,10 @@ originalWeightkg = 100;
 % 1.1000 1.3000 1.5000 1.7000 
 % 8 6 4 2
 % Store your results with variable names vecA, vecB and vecC respectively.
+
+vecA = 2:7
+vecB = 1.1000 : + .2000 : 1.7000
+vecC = 8 : -2 : 2
 
 
 
