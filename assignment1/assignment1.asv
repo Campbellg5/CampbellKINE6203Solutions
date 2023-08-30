@@ -124,8 +124,13 @@ maxNameLength = 63
 
 originalWeightkg = 100;
 % Add your code on the next line
-
-standardValue = orginalWeightk
+standarValueoz = originalWeightkg * 35
+standardValuelb = originalWeightkg * 2.2
+who
+whos
+clear standarValueoz
+who
+whos
 
 % 15. Assign a number with a decimal place to an appropriately named variable. Convert the
 % variable to the type int32 and store the result in a new variable (hint: this is known
@@ -137,7 +142,8 @@ standardValue = orginalWeightk
 % 16. Create a variable called weightInLBs to store a weight in pounds. Convert this to 
 % kilograms using an appropriate calculation or function and assign the result to a variable weightInKgs.
 
-
+weightInLBs = input ('weight in pounds')
+weightinKGs = weightInLBs / 2.2
 
 
 % 18. Create a variable fTemp to store a temperature in degrees Fahrenheit (F). 
@@ -145,6 +151,8 @@ standardValue = orginalWeightk
 % calculation and store the result in a variable cTemp.
 
 
+fTemp = input ('temp in degrees (F)')
+cTemp = (fTemp - 32 ) * 5 / 9 
 
 
 % 19. Using the colon operator, create the following row vectors:
@@ -152,6 +160,10 @@ standardValue = orginalWeightk
 % 1.1000 1.3000 1.5000 1.7000 
 % 8 6 4 2
 % Store your results with variable names vecA, vecB and vecC respectively.
+
+vecA = 2:7
+vecB = 1.1000 : + .2000 : 1.7000
+vecC = 8 : -2 : 2
 
 
 
@@ -161,14 +173,14 @@ standardValue = orginalWeightk
 % from 0 to 2pi. 
 
 
-
+vec = [0 : 2 * pi]
 
 % 21. Using the colon operator and the transpose operator, 
 % create a column vector that has the values -1 to 1 in steps of 0.5.
 % Assign your answer to a variable called colVec.
 
-
-
+colVec = [ -1 ; + .5 ; 1 ]
+colVec = [ -1 ; + 0.5 ; 1]'
 
 % 22. Create a variable called rows that is a random integer in the inclusive range 
 % from 1 to 5. Create a variable called cols that is a random integer in the 
@@ -177,7 +189,9 @@ standardValue = orginalWeightk
 % change each time you execute your code. 
 
 
-
+rows = 
+cols =
+resultMat =
 
 % 23. Create a vector of five random integers, each in the inclusive range 
 % from -10 to 10 assigned to a variable named originalVec. Perform each of 
@@ -203,8 +217,18 @@ standardValue = orginalWeightk
 % result of your calculation in a variable called trapArea. Comment your
 % code so that another user can understand what your code does. 
 
+A = ((input ('base1') + input ( 'base2' ) )/ 2 ) * input ('height')
+base1 = 5
+base2 = 7
+height = 3
 
+trapArea = ( ( base1 + base2 ) / 2 ) * height
 
+A = ((input ('a') + input ( 'b' ) )/ 2 ) * input ('h')
+% I wanted to make the code so you can input any numbers and still calc the
+% area. Not sure the proper way I think I am close. Insert a number for 'a'
+% that will represent your base1. Insert a number for 'b' that will
+% represent base2. Last input 'h' which will represent the height. 
 
 
 % 25. In sports marketing and other areas of sports management, 
@@ -217,8 +241,10 @@ standardValue = orginalWeightk
 % costs and then calculates the ROI and stores the value in a variable called
 % ROI.
 
-
-
+totalRev = input ('xR')
+totalCost = input ('xC')
+ROI = ( totalRev - totalCost ) / totalCost * 100
+% xR = total revenues, xC = total costs
 
 
 %% 

@@ -173,14 +173,14 @@ vecC = 8 : -2 : 2
 % from 0 to 2pi. 
 
 
-
+vec = [0 : 2 * pi]
 
 % 21. Using the colon operator and the transpose operator, 
 % create a column vector that has the values -1 to 1 in steps of 0.5.
 % Assign your answer to a variable called colVec.
 
-
-
+colVec = [ -1 ; + .5 ; 1 ]
+colVec = [ -1 ; + 0.5 ; 1]'
 
 % 22. Create a variable called rows that is a random integer in the inclusive range 
 % from 1 to 5. Create a variable called cols that is a random integer in the 
@@ -189,7 +189,9 @@ vecC = 8 : -2 : 2
 % change each time you execute your code. 
 
 
-
+rows = 
+cols =
+resultMat =
 
 % 23. Create a vector of five random integers, each in the inclusive range 
 % from -10 to 10 assigned to a variable named originalVec. Perform each of 
@@ -215,8 +217,18 @@ vecC = 8 : -2 : 2
 % result of your calculation in a variable called trapArea. Comment your
 % code so that another user can understand what your code does. 
 
+A = ((input ('base1') + input ( 'base2' ) )/ 2 ) * input ('height')
+base1 = 5
+base2 = 7
+height = 3
 
+trapArea = ( ( base1 + base2 ) / 2 ) * height
 
+A = ((input ('a') + input ( 'b' ) )/ 2 ) * input ('h')
+% I wanted to make the code so you can input any numbers and still calc the
+% area. Not sure the proper way I think I am close. Insert a number for 'a'
+% that will represent your base1. Insert a number for 'b' that will
+% represent base2. Last input 'h' which will represent the height. 
 
 
 % 25. In sports marketing and other areas of sports management, 
@@ -229,8 +241,10 @@ vecC = 8 : -2 : 2
 % costs and then calculates the ROI and stores the value in a variable called
 % ROI.
 
-
-
+totalRev = input ('xR')
+totalCost = input ('xC')
+ROI = ( totalRev - totalCost ) / totalCost * 100
+% xR = total revenues, xC = total costs
 
 
 %% 
