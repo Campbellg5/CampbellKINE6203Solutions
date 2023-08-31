@@ -62,7 +62,7 @@ plot(x,y) %<- command goes here
 % this function do and how would you use it?
 
 %
-% Answer: 
+% Answer: Ttest is used to compare the means of two groups. The function 
 %
 
 % 8. What are the 2 major types of loops that MATLAB supports? What is the
