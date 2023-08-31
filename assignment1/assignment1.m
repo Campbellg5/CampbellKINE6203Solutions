@@ -217,14 +217,11 @@ resultMat =
 % result of your calculation in a variable called trapArea. Comment your
 % code so that another user can understand what your code does. 
 
-A = ((input ('base1') + input ( 'base2' ) )/ 2 ) * input ('height')
-base1 = 5
-base2 = 7
-height = 3
+base1 = (input ( 'number for base1' ))
+base2 = (input ( 'number for base2' ))
+height = (input ( 'number for height' ))
 
 trapArea = ( ( base1 + base2 ) / 2 ) * height
-
-A = ((input ('a') + input ( 'b' ) )/ 2 ) * input ('h')
 % I wanted to make the code so you can input any numbers and still calc the
 % area. Not sure the proper way I think I am close. Insert a number for 'a'
 % that will represent your base1. Insert a number for 'b' that will
