@@ -44,7 +44,7 @@ helpURL = 'https://www.mathworks.com/help/matlab/';
 % 5. Write some commands that would return a list of all of the available 
 % functions in the image processing toolbox? 
 
-
+web("https://www.mathworks.com/help/images/referencelist.html?type=function&s_tid=CRUX_topnav")
 
 % 6. On the line below figure, write a command to draw a graph of 
 % x and y. 
@@ -62,8 +62,12 @@ plot(x,y) %<- command goes here
 % this function do and how would you use it?
 
 %
-% Answer: Ttest is used to compare the means of two groups. The function 
-%
+% Answer: ttest is used to compare the means of two groups. The function is
+% to determine the mean of two samples and evualate if there is a
+% signficant difference or not. You could use it if you want to compare
+% something specific about a large group of people to a smaller group of 
+% people and see if it is relatable. That would be an example of a one
+% sample Ttest.
 
 % 8. What are the 2 major types of loops that MATLAB supports? What is the
 % difference between them?
@@ -98,7 +102,9 @@ S = sum('A')
 % could play a similar game on Matlab? Write the command that would launch
 % the game if so. 
 
-
+xpbombs
+% according to google this is the command to play minesweeper. No I don't
+% understand how
 
 
 % 12. Create a variable myAge and assign it the value of your age. Then 
@@ -136,8 +142,9 @@ whos
 % variable to the type int32 and store the result in a new variable (hint: this is known
 % as casting in computer programming). Use whos to check your result. 
 
-
-
+decimalVariable = .05
+newVariable = cast (decimalVariable, "int32")
+whos
 
 % 16. Create a variable called weightInLBs to store a weight in pounds. Convert this to 
 % kilograms using an appropriate calculation or function and assign the result to a variable weightInKgs.
@@ -172,8 +179,7 @@ vecC = 8 : -2 : 2
 % (assigned to a variable called vec) of 50 elements that range, equally spaced, 
 % from 0 to 2pi. 
 
-
-vec = [0 : 2 * pi]
+ vec = linspace(0, 2 * pi, 50) 
 
 % 21. Using the colon operator and the transpose operator, 
 % create a column vector that has the values -1 to 1 in steps of 0.5.
@@ -189,28 +195,28 @@ colVec = [ -1 ; + 0.5 ; 1]'
 % change each time you execute your code. 
 
 
-rows = 
-cols =
-resultMat =
+rows = randi ( [ 1 5] )
+cols = randi ( [ 1 5] )
+resultMat = zeros ( rows, cols )
 
 % 23. Create a vector of five random integers, each in the inclusive range 
 % from -10 to 10 assigned to a variable named originalVec. Perform each of 
 % the following on the original vector and store your results in appropriately 
 % named variables. (you should have a seperate line of code for each)
-
+originalVec = randi([ -10, 10 ], 5, 1 )
 % - subtract 3 from each element
 
-
+sub = originalVec - 3
 % - count how many are positive
 
-
+positive = sum (originalVec > 0)
 % - get the absolute value of each element
-
+absolute = abs(originalVec)
 
 
 % - find the maximum.
 
-
+maximum = max (originalVec)
 
 % 24. Write some code that will calculate the area of a trapezoid. Create
 % variables for base1, base2, and height and assign them values. Store the
@@ -220,12 +226,9 @@ resultMat =
 base1 = (input ( 'number for base1' ))
 base2 = (input ( 'number for base2' ))
 height = (input ( 'number for height' ))
-
 trapArea = ( ( base1 + base2 ) / 2 ) * height
-% I wanted to make the code so you can input any numbers and still calc the
-% area. Not sure the proper way I think I am close. Insert a number for 'a'
-% that will represent your base1. Insert a number for 'b' that will
-% represent base2. Last input 'h' which will represent the height. 
+% Insert the measurement represented for each variable.Based of the values
+% the area of a trapezoid will be calculated. 
 
 
 % 25. In sports marketing and other areas of sports management, 
@@ -238,8 +241,8 @@ trapArea = ( ( base1 + base2 ) / 2 ) * height
 % costs and then calculates the ROI and stores the value in a variable called
 % ROI.
 
-totalRev = input ('xR')
-totalCost = input ('xC')
+totalRev = input ('total revenue:')
+totalCost = input ('total cost:')
 ROI = ( totalRev - totalCost ) / totalCost * 100
 % xR = total revenues, xC = total costs
 
@@ -254,9 +257,10 @@ ROI = ( totalRev - totalCost ) / totalCost * 100
 % part 2, make sure you click the Run Section button vs the Run button) 
 
 %%% Enter the code for your program below this line
-
-
-
+prompt = "what is your name?"
+name = input(prompt, "s")
+s = strcat("hello world from" , name)
+disp(s)
 
 
 
