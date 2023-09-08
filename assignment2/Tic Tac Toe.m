@@ -37,7 +37,6 @@ playerOne = input("Do you want to play? Y/N:","s")
 
 disp("For your move choose a number a to i")
 playerOne = input('letter')
-disp(gameboard)
 if (playerOne == 'a')
 gameboard(1,1)= X
 elseif(playerOne =='b')
