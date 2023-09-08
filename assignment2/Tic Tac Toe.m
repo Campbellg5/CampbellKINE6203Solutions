@@ -22,8 +22,6 @@ disp(s)
 
 gameboard = [ "a" "b" "c" ; "d" "e" "f" ; "g" "h" "i" ] 
 
- disp (gameboard)
-
 playerOne = input("Do you want to play? Y/N:","s")
 
  if (playerOne == "Y") 
