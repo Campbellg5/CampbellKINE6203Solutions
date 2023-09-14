@@ -20,7 +20,7 @@ s = strcat( name,', welcome to Tic Tac Toe, enjoy!');
 
 disp(s)
 
-gameboard = [ "a" "b" "c" ; "d" "e" "f" ; "g" "h" "i" ] 
+gameboard = [ "a" "b" "c" ; "d" "e" "f" ; "g" "h" "i" ]
 
 playerOne = input("Do you want to play? Y/N,:","s")
 
@@ -35,13 +35,20 @@ playerOne = input("Do you want to play? Y/N,:","s")
 
 disp("For your move choose a letter a to i")
 
+
+%do not mess with above it works.
+
 %while loop for input validation
 
 playerOne = input('letter','s')
 
 if (playerOne == 'a')
         gameboard(1,1)= "X"
-        gameboard(2,2)= "O"
+        gameboard (2,2)= "O"
+availableMoves = setdiff(availableMoves,playerOne); 
+
+end
+
 elseif(playerOne =='b')
     gameboard(1,2)= "X"
     gameboard(2,2)= "O"
@@ -50,66 +57,144 @@ elseif(playerOne =='c')
     gameboard(2,2)= "O"
 elseif(playerOne =='d')
     gameboard(2,1)= "X"
-    gameboard(2,2)= "O";
+    gameboard(2,2)= "O"
 elseif(playerOne =='e')
-    gameboard(2,2)= "X";
+    gameboard(2,2)= "X"
     gameboard(1,2)= "O"
 elseif(playerOne =='f')
     gameboard(2,3)= "X"
     gameboard(2,2)= "O"
 elseif(playerOne =='g')
-    gameboard(3,1)= "X";
-    gameboard(2,2)= "O";
+    gameboard(3,1)= "X"
+    gameboard(2,2)= "O"
 elseif(playerOne =='h')
-    gameboard(3,2)= "X";
-    gameboard(2,2)= "O";
+    gameboard(3,2)= "X"
+    gameboard(2,2)= "O"
 elseif(playerOne =='i')
-    gameboard(3,3)= "X";
-    gameboard(2,2)= "O";
+    gameboard(3,3)= "X"
+    gameboard(2,2)= "O"
 end
+
+%solid first move. Need to figure out better second move and how to make it
+%not retake a spot. 
 
 fprintf('moveTwo')
 
-playerOne = input('letter','s');
+playerOne = input('letter','s')
 
 if (playerOne == 'a')
-        gameboard(1,1)= "X";
-        gameboard(2,3)= "O";
+        gameboard(1,1)= "X"
+        gameboard(2,3)= "O"
 elseif(playerOne =='b')
-    gameboard(1,2)= "X";
-    gameboard(2,3)= "O";
+    gameboard(1,2)= "X"
+    gameboard(2,3)= "O"
 elseif(playerOne =='c')
-    gameboard(1,3)= "X";
-    gameboard(2,3)= "O";
+    gameboard(1,3)= "X"
+    gameboard(2,3)= "O"
 elseif(playerOne =='d')
-    gameboard(2,1)= "X";
-    gameboard(2,3)= "O";
+    gameboard(2,1)= "X"
+    gameboard(2,3)= "O"
 elseif(playerOne =='e')
-    gameboard(2,2)= "X";
-    gameboard(2,3)= "O";
+    gameboard(2,2)= "X"
+    gameboard(2,3)= "O"
 elseif(playerOne =='f')
-    gameboard(2,3)= "X";
-    gameboard(3,2)= "O";
+    gameboard(2,3)= "X"
+    gameboard(3,2)= "O"
 elseif(playerOne =='g')
-    gameboard(3,1)= "X";
-    gameboard(2,3)= "O";
+    gameboard(3,1)= "X"
+    gameboard(2,3)= "O"
 elseif(playerOne =='h')
-    gameboard(3,2)= "X";
-    gameboard(2,3)= "O";
+    gameboard(3,2)= "X"
+    gameboard(2,3)= "O"
 elseif(playerOne =='i')
-    gameboard(3,3)= "X";
-    gameboard(2,3)= "O";
+    gameboard(3,3)= "X"
+    gameboard(2,3)= "O"
 end
 
 fprintf('moveThree')
 
-while playerOne == 'a'
-    fprintf(gameboard (1,1)= "X")
-    fprintf(gameboard(3,3)= "O")
+playerOne = input('letter','s')
+
+if (playerOne == 'a')
+        gameboard(1,1)= "X"
+        gameboard(2,3)= "O"
+elseif(playerOne =='b')
+    gameboard(1,2)= "X"
+    gameboard(2,3)= "O"
+elseif(playerOne =='c')
+    gameboard(1,3)= "X"
+    gameboard(2,3)= "O"
+elseif(playerOne =='d')
+    gameboard(2,1)= "X"
+    gameboard(2,3)= "O"
+elseif(playerOne =='e')
+    gameboard(2,2)= "X"
+    gameboard(2,3)= "O"
+elseif(playerOne =='f')
+    gameboard(2,3)= "X"
+    gameboard(3,2)= "O"
+elseif(playerOne =='g')
+    gameboard(3,1)= "X"
+    gameboard(2,3)= "O"
+elseif(playerOne =='h')
+    gameboard(3,2)= "X"
+    gameboard(2,3)= "O"
+elseif(playerOne =='i')
+    gameboard(3,3)= "X"
+    gameboard(2,3)= "O"
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%trying to figure out how to loop down below.
+
+playerOne = input('letter','s')
+ for i = 1:playerOne('a')
+     gameboard(1,1)="X"
+ end 
+
+playerOne = input('letter','s')
+
+while (playerOne == 'c') 
+  gameboard(1,3) = "X"
+  gameboard(1,1)= "O"
+  break 
+end
+%this works but what is the differnce between doing and a whole bunch of if
+%and ifelse statements?
+
+availableMoves = [ "a" "b" "c" ; "d" "e" "f" ; "g" "h" "i"]
+availableMoves== setdiff(availableMoves,playerOne,) 
+playerOne = input('letter','s')
+if playerOne == 'a'
+    availableMoves = 
+end
+%for statement to end the game
+%avaible moves how to check a value. 
+
 
 % play again
 
- playerOne = input("Play again? Y/N,:","s")
+ playerOne = input("Play again? Y/N,:","s");
 
   if contains(playerOne,"Y","IgnoreCase",true)
      %play game
