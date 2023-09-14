@@ -8,7 +8,7 @@
 % Tested using matlab 2023
 % Test on MacBook Pro 
 
-% Last updated: 9/7/2023
+% Last updated: 9/13/2023
 
 %gameboard(1,1) = 
 % Welcome Message
@@ -20,7 +20,7 @@ s = strcat( name,', welcome to Tic Tac Toe, enjoy!');
 
 disp(s)
 
-gameboard = [ "a" "b" "c" ; "d" "e" "f" ; "g" "h" "i" ] 
+gameboard = [ "a" "b" "c" ; "d" "e" "f" ; "g" "h" "i" ]
 
 playerOne = input("Do you want to play? Y/N,:","s")
 
@@ -35,7 +35,8 @@ playerOne = input("Do you want to play? Y/N,:","s")
 
 disp("For your move choose a letter a to i")
 
-%while loop for input validatioon
+%while loop for input validation
+
 playerOne = input('letter','s')
 
 if (playerOne == 'a')
@@ -69,7 +70,7 @@ end
 
 fprintf('moveTwo')
 
-playerOne = input('letter')
+playerOne = input('letter','s')
 
 if (playerOne == 'a')
         gameboard(1,1)= "X"
@@ -102,16 +103,36 @@ end
 
 fprintf('moveThree')
 
-playerOne = input('letter')
+%trying to figure out how to loop down below.
 
-% play again?
- playerOne = input("Play again? Y/N,:","s")
+playerOne = input('letter','s')
+ for i = 1:playerOne('a')
+     gameboard(1,1)="X"
+ end 
 
- if (playerOne == "Y|y")
+playerOne = input('letter','s')
+
+while (playerOne == 'c') 
+  gameboard(1,3) = "X"
+  gameboard(1,1)= "O"
+  break 
+end
+%this works but what is the differnce between doing and a whole bunch of if
+%and ifelse statements?
+
+%for statement to end the game
+
+
+
+% play again
+
+ playerOne = input("Play again? Y/N,:","s");
+
+  if contains(playerOne,"Y","IgnoreCase",true)
      %play game
      disp('playing game')
      disp(gameboard)
  else 
      %quit game
      disp('quitting game')
- end 
+ end
