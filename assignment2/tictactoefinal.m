@@ -70,6 +70,73 @@ if (playerOne == '1' && gameboard (1,1) == '1') %making sure they can't go in a 
                 gameboard(3,3)= "X"
                 availableMoves = setdiff(availableMoves,playerOne);         
 end 
+
+if gameboard(1,1) == "X" && gameboard(1,2) == "X" && gameboard(1,3) == "X" 
+                complete = true;
+                disp('you win!')
+                break
+            elseif gameboard(1,1) == "O" && gameboard(1,2) == "O" && gameboard(1,3) == "O" 
+                complete = true;
+                disp('tough.')
+                break
+            elseif gameboard(2,1) == "X" && gameboard(2,2) == "X" && gameboard(2,3) == "X" 
+                complete = true;
+                disp('you win!')
+                break
+            elseif gameboard(2,1) == "O" && gameboard(2,2) == "O" && gameboard(2,3) == "O" 
+                complete = true;
+                disp('ouch.')
+                break
+            elseif gameboard(3,1) == "X" && gameboard(3,2) == "X" && gameboard(3,3) == "X" 
+                complete = true;
+                disp('you win!')
+                break
+            elseif gameboard(3,1) == "O" && gameboard(3,2) == "O" && gameboard(3,3) == "O" 
+                complete = true;
+                disp('you lose.')
+                break
+            elseif gameboard(1,1) == "X" && gameboard(2,1) == "X" && gameboard(3,1) == "X" 
+                complete = true;
+                disp('you win!')
+                break
+            elseif gameboard(1,1) == "O" && gameboard(2,1) == "O" && gameboard(3,1) == "O"
+                complete = true;
+                disp('you lose.')
+                break
+            elseif gameboard(1,2) == "X" && gameboard(2,2) == "X" && gameboard(3,2) == "X"
+                complete = true;
+                disp('you win!')
+                break
+            elseif gameboard(1,2) == "O" && gameboard(2,2) == "O" && gameboard(3,2) == "O"
+                complete = true;
+                disp('you lose.')
+                break
+            elseif gameboard(1,3) == "X" && gameboard(2,3) == "X" && gameboard(3,3) == "X"
+                complete = true;
+                disp('you win!')
+                break
+            elseif gameboard(1,3) == "O" && gameboard(2,3) == "O" && gameboard(3,3) == "O"
+                complete = true;
+                disp('you lose.')
+                break
+            elseif gameboard(1,3) == "X" && gameboard(2,2) == "X" && gameboard(3,1) == "X"
+                complete = true;
+                disp('you win!')
+                break
+            elseif gameboard(1,3) == "O" && gameboard(2,2) == "O" && gameboard(3,1) == "O"
+                complete = true;
+                disp('you lose.')
+                break
+            elseif gameboard(1,1) == "X" && gameboard(2,2) == "X" && gameboard(3,3) == "X"
+                complete = true;
+                disp('you win!')
+                break
+            elseif gameboard(1,1) == "O" && gameboard(2,2) == "O" && gameboard(3,3) == "O"
+                complete = true;
+                disp('you lose.')
+                break
+end
+
   if availableMoves > '0'
   compMove = randsample(availableMoves,1)
                 [row,col]= findIndex (compMove);
