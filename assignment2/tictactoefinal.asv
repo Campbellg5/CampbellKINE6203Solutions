@@ -82,7 +82,7 @@ if gameboard(1,1) == "X" && gameboard(1,2) == "X" && gameboard(1,3) == "X"
                 break
             elseif gameboard(1,1) == "O" && gameboard(1,2) == "O" && gameboard(1,3) == "O" 
                 complete = true;
-                disp('tough.')
+                disp('you lose.')
                 break
             elseif gameboard(2,1) == "X" && gameboard(2,2) == "X" && gameboard(2,3) == "X" 
                 complete = true;
@@ -90,7 +90,7 @@ if gameboard(1,1) == "X" && gameboard(1,2) == "X" && gameboard(1,3) == "X"
                 break
             elseif gameboard(2,1) == "O" && gameboard(2,2) == "O" && gameboard(2,3) == "O" 
                 complete = true;
-                disp('ouch.')
+                disp('you lose.')
                 break
             elseif gameboard(3,1) == "X" && gameboard(3,2) == "X" && gameboard(3,3) == "X" 
                 complete = true;
@@ -145,7 +145,8 @@ elseif gameboard(1,1) ~= '1' && gameboard(1,2) ~= "2" && gameboard(1,3) ~= "3" &
     break 
 end
 end
- 
+
+% while player one input is y. run through game. no end. 
 playerOne = input("Play again? Y/N,:","s");
 gameboard = [ "1" "2" "3" ; "4" "5" "6" ; "7" "8" "9" ];
  if contains(playerOne,"Y","IgnoreCase",true) % if statement to run based off of players one input. 
