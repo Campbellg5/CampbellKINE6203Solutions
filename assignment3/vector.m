@@ -1,4 +1,15 @@
-function [outputArg1,outputArg2] = vector(inputArg1,inputArg2)
+function vector(vec1,vec2)
+% Input two vectors, the fuction will then graph. Axis and tile labeled.
+
+%show the plot of both inputs
+plot(vec1,vec2)
+%labeling of x-axis
+xlabel("xAxis")
+%labelign of y-axis
+ylabel("yAxis")
+%labeling of title
+title("graph")
+
 
 end
 

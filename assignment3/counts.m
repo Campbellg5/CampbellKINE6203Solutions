@@ -1,20 +1,7 @@
-function [outputArg1,outputArg2] = counts(inputArg1,inputArg2)
-
+function counts(small,large)
+%Input smaller number first and then the larger number second.
+%This function will count from the smaller value to the largest value by 1.
+% 
+for count=small:large
+   disp(count)
 end
-
-
-
-
-
-
-
-
-
-
-%Write a function that takes 2 numbers as input and 
-% displays a counter from the lower number to the higher number.
-%If Inputs = (a, b)
-%Expected output: a
-%a+1
-%a+2
-%... b

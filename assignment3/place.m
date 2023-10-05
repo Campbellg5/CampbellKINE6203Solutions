@@ -1,18 +1,15 @@
-function [length, first, last] = place(string)
+function [len, first, last] = place(string)
+%Input needs to be a string.
+%This funtion will output the total length of the string, the first letter
+%of the string and the last letter of the string. 
 
-length = strlength(string);
-
-first = extract(string,1);
-
-last = extract(string,length);
+%Output for the total lenght of the string giving the numerical value. 
+len = length(string)
+% Outputting the first letter of the string input.
+first = string(1)
+% Outputting the last letter of the string input. 
+last = string(len);
 
 end
 
-
-
-%%Write a function that takes a string value as input and returns 
-% the length of the string and the first and last character as outputs.
-%If input = %Halloween’
-%Expected Output: 9
-%H
-%n
+ 
