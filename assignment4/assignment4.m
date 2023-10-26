@@ -14,7 +14,7 @@
 
 
 %Cleaing all previous workspace variables and command window. 
-clear all
+clear
 clc
 %Import file function with 5 outputs. The outputs will be in column vector
 %form. 
